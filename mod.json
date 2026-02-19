@@ -15,5 +15,16 @@
 		"sprites": [
 			"resources/HHGD_CloseBtn_001.png"
 		]
+	},
+	"links": {
+		"source": "https://github.com/hhappa0-code/HHGD"
+	},
+	"tags": [
+		"universal",
+		"cheat"
+	],
+	"issues": {
+		"info": "Create an Issue on the GitHub site by going into the Issues tab and click on New issue.",
+		"url": "https://github.com/hhappa0-code/HHGD/issues"
 	}
 }
