@@ -5,7 +5,8 @@ using namespace geode::prelude;
 class $modify(HHGDMenuLayer, MenuLayer)
 {
     $override
-    bool init() {
+    bool init()
+    {
         if (!MenuLayer::init())
         {
             return false;
@@ -38,7 +39,7 @@ class $modify(HHGDMenuLayer, MenuLayer)
         return true;
     }
 
-    void onRestartButtonClick(CCObject* sender)
+    void onRestartButtonClick(CCObject*)
     {
         createQuickPopup("Restart Game", "Are you sure you want to <cy>restart</c>?", "Cancel", "Yes", [](auto, bool yesButton)
         {
@@ -49,8 +50,8 @@ class $modify(HHGDMenuLayer, MenuLayer)
         });
     }
 
-    void onHHGDButtonClick(CCObject* sender)
+    void onHHGDButtonClick(CCObject*)
     {
-
+        // TODO: Create menu and open on click
     }
 };
