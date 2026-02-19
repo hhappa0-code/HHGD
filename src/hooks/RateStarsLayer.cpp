@@ -12,21 +12,15 @@ class $modify(HHGDRateStarsLayer, RateStarsLayer)
             return false;
         }
 
-        auto level = GameLevelManager::get()
-            ->getSavedLevel(m_levelID);
-        int requested = level
-            ->m_starsRequested;
+        auto level = GameLevelManager::get()->getSavedLevel(m_levelID);
+        int requested = level->m_starsRequested;
 
         if (requested <= 0 || requested > 10)
         {
             return true;
         }
 
-        m_mainLayer
-            ->getChildByType<CCMenu>(0)
-            ->getChildByType<CCMenuItemSpriteExtra>(requested - 1)
-            ->getChildByType<ButtonSprite>(0)
-            ->setColor(ccColor3B(0, 255, 0));
+        m_mainLayer->getChildByType<CCMenu>(0)->getChildByType<CCMenuItemSpriteExtra>(requested - 1)->getChildByType<ButtonSprite>(0)->setColor(ccColor3B(0, 255, 0));
 
         return true;
     }
