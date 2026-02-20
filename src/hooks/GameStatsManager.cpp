@@ -1,5 +1,6 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/GameStatsManager.hpp>
+#include "../utils/SettingsManager.hpp"
 
 using namespace geode::prelude;
 
@@ -9,7 +10,7 @@ class $modify(HHGDGameStatsManager, GameStatsManager)
     bool isItemUnlocked(UnlockType type, int id) {
         if (type == UnlockType::GJItem && id == 17)
         {
-            return Mod::get()->getSavedValue<bool>("practice-music-sync");
+            return SettingsManager::get().getBool("practice-music-sync");
         }
         
         return GameStatsManager::isItemUnlocked(type, id);
